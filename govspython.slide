@@ -1,0 +1,31 @@
+#+theme=black
+Go vs. Python
+
+Dmytro Grendach
+Nokia
+
+[[http://github.com/grendach/GOvsPython][github.com/grendach/GOvsPython]]
+
+
+* Agenda
+
+1. Hello World
+2. Print
+3. Comments
+4. Multiple Strings
+5. Lists
+6. Maps
+7. Booleans
+8. Forloop
+9. Range
+10. Switch
+
+
+
+* Go - Hello world
+
+.play code/hello.go
+
+* Python - Hello world
+.code code/hello.py
+
