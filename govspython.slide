@@ -1,4 +1,6 @@
 #+theme=black
+#+closingMessage=Thanks and let's GO!
+
 Go vs. Python
 
 Dmytro Grendach
@@ -8,24 +10,35 @@ Nokia
 
 
 * Agenda
+.image images/golang_vs_python.jpg 150 800
+1. Who is Who
+2. Hello World
+3. Lists(slices)
+5. Maps
+6. Booleans
+7. Forloop
+8. Range
+9. Switch
+10.
 
-1. Hello World
-2. Print
-3. Comments
-4. Multiple Strings
-5. Lists
-6. Maps
-7. Booleans
-8. Forloop
-9. Range
-10. Switch
+* Who is Who
+What is Go
+What is Python
 
+* Hello world in Python: 
+.image images/python.png 50 50 
+.code code/hello.py
 
-
-* Go - Hello world
-
+* Hello world in Go: 
+.image images/Biker_Gopher.png 50 50 
 .play code/hello.go
 
-* Python - Hello world
-.code code/hello.py
+
+* Lists in Python:
+.image images/python.png 50 50 
+.code code/lists.py 
+
+* Lists(slices) in Go:
+.image images/winterGopher.jpg 50 50
+.play code/lists.go
 
