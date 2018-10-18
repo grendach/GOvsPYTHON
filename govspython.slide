@@ -14,7 +14,7 @@ Nokia
 1. Who is Who
 2. Hello World
 3. Lists(slices)
-5. Maps
+5. Dictionaries(maps)
 6. Booleans
 7. Forloop
 8. Range
@@ -26,19 +26,20 @@ What is Go
 What is Python
 
 * Hello world in Python: 
-.image images/python.png 50 50 
 .code code/hello.py
 
 * Hello world in Go: 
-.image images/Biker_Gopher.png 50 50 
 .play code/hello.go
 
 
 * Lists in Python:
-.image images/python.png 50 50 
 .code code/lists.py 
 
-* Lists(slices) in Go:
-.image images/winterGopher.jpg 50 50
+* Lists (slices) in Go:
 .play code/lists.go
 
+* Dictionaries in Python:
+.code code/dict.py
+
+* Map in Go:
+.play code/dict.go
