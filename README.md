@@ -7,28 +7,20 @@ Comparing [Golang](http://golang.org) and [Python](https://www.python.org/) usin
 Prerequireties:
 
     1. install Golang
-    2. install Golang present tool( present-plus or present):
+    2. install Golang present-plus tool
+    3. pull this repo to you PC
 
 
 1. Download:
     ```sh
     $ go get -u github.com/davelaursen/present-plus
     ``` 
-    or
-    ```sh
-    $ go get -u golang.org/x/tools/cmd/present
-    ```
-
-2. Then run presentation:
+    
+2. Run presentation:
     ```sh
         $ present-plus
     ```
-    or
-
+3. Open in browser next link:
     ```sh
-    $ present
-    ```
-3. Finally open in browser next link:
-    ```sh
-    http://localhost:3999
+    http://localhost:4999
     ```
