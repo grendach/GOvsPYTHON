@@ -16,43 +16,37 @@ Nokia
 3. Lists(slices)
 4. Dictionaries(maps)
 5. Loops
-8. Range
-9. Switch
+6. Error handling
+7. Pointers
+9. Interface
+10. Struct
+9. Web server
 10.
 
-* Who is Who
-What is Go
-What is Python
-
-* The Zen of Python
+* Who is who: Python
+ The Zen of Python:
  - Beautiful is better than ugly.
  - Explicit is better than implicit.
  - Simple is better than complex.
  - Complex is better than complicated.
  - Flat is better than nested.
  - Sparse is better than dense.
- - Readability counts.
- - Special cases aren't special enough to break the rules.
- - Although practicality beats purity.
- - Errors should never pass silently.
- - Unless explicitly silenced.
- - In the face of ambiguity, refuse the temptation to guess.
- - There should be one-- and preferably only one --obvious way to do it.
- - Although that way may not be obvious at first unless you're Dutch.
- - Now is better than never.
- - Although never is often better than *right* now.
- - If the implementation is hard to explain, it's a bad idea.
- - If the implementation is easy to explain, it may be a good idea.
- - Namespaces are one honking great idea -- let's do more of those!
+.image images/python.png 200 200
 
-* Go features
- - Concurrency
- - Simplicity and Consistency
+* Who is who: Go
+ Go target is to make programmer's life easier, get things done:
+ - Static typing
+ - Consistent standard library
  - Go is object oriented
- - The Compiler.
- - Pointers.
+ - Type-safe and memory-safe: ointers is used in Go, but pointer-arithmetic is not possible
+ - Struct
+ - Goroutines
+ - Easy deployment system (go install)
+ - Self-documenting (and well-documented)
+ - Free and Open Source (BSD licensed)
+.image images/strongGopher.jpg 200 200
 
-Go target is to make programmer's life easier, get things done
+
 
 * Python vs Go
 .image images/fight.jpg
@@ -75,7 +69,7 @@ Let the battle begin...
 * Dictionaries in Python:
 .code code/dict.py
 
-* Map in Go:
+* Dictionaries in Go it's Map!
 .play code/dict.go
 
 * Loop in Python:
@@ -84,9 +78,32 @@ Let the battle begin...
 * Loop in Go
 .play code/loop.go
 
-* Exceptions in Python:
+* Error handling in Python:
+Error handling in Python is done through the use of exceptions.
 
-* Exceptions in Go:
+.code code/exception.py
 
-                             No in Go
 
+* Error handling in Go:
+
+Go doesn’t have exceptions, so it doesn’t have try…catch or anything similar. 
+
+There are two common methods for handling errors in Go:
+  - panic
+  - multiple return values
+
+.play code/exception.go
+
+* Pointers in Python:
+Some text will be here
+
+* Pointers in Go:
+Go has pointers. A pointer holds the memory address of a value.
+
+.play code/pointers.go
+
+* Simple web server in Python:
+ put here simple python web server
+
+* Simple web server in Go:
+.play code/web.go
