@@ -1,55 +1,64 @@
 #+theme=black
-#+closingMessage=Thanks and let's GO!
 
 Go vs. Python
 
 Dmytro Grendach
 Nokia
 
-[[http://github.com/grendach/GOvsPython][github.com/grendach/GOvsPython]]
+[[http://github.com/grendach/GOvsPython]]
 
 
 * Agenda
-.image images/golang_vs_python.jpg 150 800
+.image images/golang_vs_python.jpg 100 800
 1. Who is Who
 2. Hello World
-3. Lists(slices)
-4. Dictionaries(maps)
-5. Loops
-6. Error handling
-7. Pointers
-9. Interface
-10. Struct
-9. Web server
-10.
+3. Main differences:
+  - Lists(slices)
+  - Dictionaries(maps)
+  - Loops
+  - Error handling
+  - Other differences
+4. What is written in Python and Go
+5. Q&A
 
 * Who is who: Python
+
+- Created by *Guido* *van* *Rossum*  in 1991.
+
+- Python is dynamicly typed, interpreter language 
+
+- Use whitespace for indentation
+
+- Has 33 keywords (`class`, `def`, `for`, `if`, `while`, etc.)
+
  The Zen of Python:
  - Beautiful is better than ugly.
  - Explicit is better than implicit.
  - Simple is better than complex.
  - Complex is better than complicated.
  - Flat is better than nested.
- - Sparse is better than dense.
-.image images/python.png 200 200
+.image images/python.png 100 100
+
 
 * Who is who: Go
- Go target is to make programmer's life easier, get things done:
- - Static typing
- - Consistent standard library
- - Go is object oriented
- - Type-safe and memory-safe: ointers is used in Go, but pointer-arithmetic is not possible
- - Struct
- - Goroutines
- - Easy deployment system (go install)
- - Self-documenting (and well-documented)
- - Free and Open Source (BSD licensed)
-.image images/strongGopher.jpg 200 200
+
+- Created by Rob Pike , Robert Griesemer and Ken Thompson in 2009
+- Go is a statically typed, compiled language
+- Built in `fmt` package makes code formate for you
+- Go has 25 kyewords (`go`, `goto`, `chan`, `func`, `for`, `if`, etc. )
+  
+The designers wanted to resolve common criticisms of other languages, while retaining many of their useful characteristics:
+
+  - Statically typed and efficient (like C++ or Java)
+  - Productive and easy to use (like Python or JavaScript)[18]
+  - Supporting integrated development environments, but not requiring them
+  - Enabling high-performance networking and multiprocessing
+.image images/strongGopher.jpg 100 100
 
 
 
 * Python vs Go
-.image images/fight.jpg
+.image images/begin.gif 350 500
 Let the battle begin...
 
 
@@ -60,16 +69,26 @@ Let the battle begin...
 .play code/hello.go
 
 
-* Lists in Python:
+* Main differences
+- Lists(slices)
+- Dictionaries(maps)
+- Loops
+- Error handling
+- Pointers
+- Channell and gorutine
+- Inheritance
+- Web services
+
+* List in Python
 .code code/lists.py 
 
-* Lists (slices) in Go:
+* List (slices) in Go
 .play code/lists.go
 
-* Dictionaries in Python:
+* Dictionary in Python
 .code code/dict.py
 
-* Dictionaries in Go it's Map!
+* Dictionary in Go it's Map!
 .play code/dict.go
 
 * Loop in Python:
@@ -86,7 +105,8 @@ Error handling in Python is done through the use of exceptions.
 
 * Error handling in Go:
 
-Go doesn’t have exceptions, so it doesn’t have try…catch or anything similar. 
+Go doesn’t have exceptions, so it doesn’t have try…catch.
+Each time you need to check for error manually
 
 There are two common methods for handling errors in Go:
   - panic
@@ -102,8 +122,43 @@ Go has pointers. A pointer holds the memory address of a value.
 
 .play code/pointers.go
 
-* Simple web server in Python:
- put here simple python web server
 
-* Simple web server in Go:
-.play code/web.go
+* Channel & Goroutine
+
+*Channels* are the pipes that connect concurrent *goroutines*.
+You can send values into channels from one *goroutine* and receive those values into another *goroutine*.
+
+.play code/channel.go
+
+* Inheritance in Python:
+
+For *inheritance* Python use *base* (parent) and *sub* (child) classes.
+*Base* class create a pattern out of which *sub*, child can be based on.
+
+.code code/inheritance.py
+
+
+* Inheritance in Go:
+
+Go is unique from a lot of object-oriented languages in that it doesn’t have classes. 
+Instead, Go has two awesome features: *interface* and *struct*.
+
+*Interfaces*:
+ - You don’t explicitly say a data type implements an interface;
+ - Your data types must implement all of the methods that the interface defines;
+ - Compiler checks to see if assignments to variables of the interface type are valid.
+
+*Struct*:
+ - It's a sequence of named elements, called fields, each of which has a name and a type;
+ - Field names may be specified explicitly (IdentifierList) or implicitly (EmbeddedField);
+ - Within a struct, non-blank field names must be unique.
+
+
+* Inheritance in Go:
+.code code/inheritance.go
+
+
+* Python vs Go
+.image images/finish.gif 350 500
+
+End the winner is...
