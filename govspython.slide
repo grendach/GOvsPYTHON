@@ -9,17 +9,16 @@ Nokia
 
 
 * Agenda
-.image images/golang_vs_python.jpg 100 800
+.image images/golang_vs_python.jpg 130 800
 1. Who is Who
 2. Hello World
-3. Main differences:
-  - Lists(slices)
-  - Dictionaries(maps)
-  - Loops
-  - Error handling
-  - Other differences
-4. What is written in Python and Go
-5. Q&A
+3. Differences in:
+  - lists
+  - dictionaries
+  - loops
+  - error handling
+  - other differences 
+4. And the winner is...
 
 * Who is who: Python
 
@@ -31,7 +30,7 @@ Nokia
 
 - Has 33 keywords (`class`, `def`, `for`, `if`, `while`, etc.)
 
- The Zen of Python:
+ The Zen of Python
  - Beautiful is better than ugly.
  - Explicit is better than implicit.
  - Simple is better than complex.
@@ -50,8 +49,8 @@ Nokia
 The designers wanted to resolve common criticisms of other languages, while retaining many of their useful characteristics:
 
   - Statically typed and efficient (like C++ or Java)
-  - Productive and easy to use (like Python or JavaScript)[18]
-  - Supporting integrated development environments, but not requiring them
+  - Productive and easy to use (like Python or JavaScript)
+  - Go has pointers but unlice C, Go has no pointer arithmetic
   - Enabling high-performance networking and multiprocessing
 .image images/strongGopher.jpg 100 100
 
@@ -62,83 +61,115 @@ The designers wanted to resolve common criticisms of other languages, while reta
 Let the battle begin...
 
 
-* Hello world in Python: 
-.code code/hello.py
+* Hello world in Python
+.code -numbers code/hello.py
 
-* Hello world in Go: 
-.play code/hello.go
+* Hello world in Go 
+.play -numbers code/hello.go
 
 
-* Main differences
+* Differences in 
 - Lists(slices)
 - Dictionaries(maps)
 - Loops
 - Error handling
 - Pointers
-- Channell and gorutine
+- Coroutine vs Goroutine and channell
 - Inheritance
-- Web services
 
 * List in Python
-.code code/lists.py 
 
-* List (slices) in Go
-.play code/lists.go
+Python has next data types:
+  - *List* [ ] - ordered and changeable collection
+  - *Tuple* ( )- ordered and unchangeable.
+  - *Set* { } - unordered and unindexed.
+  - *Dictionary* { } - unordered, changeable and indexed.
+
+.code -numbers code/lists.py 
+
+
+* Slices (lists) in Go
+Slices are like references to arrays.
+A slice does not store any data, it just describes a section of an underlying array.
+Slices can be created with the built-in `make` function
+This is how you create dynamically-sized arrays.
+
+.play -numbers code/lists.go
 
 * Dictionary in Python
-.code code/dict.py
+.code -numbers code/dict.py
 
 * Dictionary in Go it's Map!
-.play code/dict.go
+.play -numbers code/dict.go
 
-* Loop in Python:
-.code code/loop.py
+* Loop in Python
+Python has two primitive loop commands:
+
+*while* loops
+*for* loops
+
+.code -numbers code/loop.py
 
 * Loop in Go
-.play code/loop.go
+Go has only one looping construct, the *for* loop.
+
+.play -numbers code/loop.go
 
 * Error handling in Python:
 Error handling in Python is done through the use of exceptions.
 
-.code code/exception.py
+.code -numbers code/error.py
 
 
-* Error handling in Go:
+* Error handling in Go
+Go doesn’t have exceptions.
+Errors are represented using the built-in `error` type, same as `int`, `string`.
+Each time you need to check for error manually.
 
-Go doesn’t have exceptions, so it doesn’t have try…catch.
-Each time you need to check for error manually
+.play -numbers code/error.go
 
-There are two common methods for handling errors in Go:
-  - panic
-  - multiple return values
+* Pointers in Python
+*Python* *doesn't* *use* *pointers!*
+Variables cannot point to other variables.
+Variables always point to the underlying object instead.
 
-.play code/exception.go
-
-* Pointers in Python:
-Some text will be here
-
-* Pointers in Go:
-Go has pointers. A pointer holds the memory address of a value.
-
-.play code/pointers.go
+.code -numbers code/pointers.py
 
 
-* Channel & Goroutine
+* Pointers in Go
+Go use *pointers* but doesn't use *pointer* math.
+*Pointer* holds the memory address of a value and represented using the `*` (asterisk).
+Operator `&`  used to find the address of a variable.
+
+.play -numbers code/pointers.go
+
+
+* Coroutine in Python
+*Coroutines* declared with `async`/`await` syntax.
+Is the preferred way of writing asyncio applications. 
+
+The following snippet of code (requires Python 3.7+) prints “hello”,
+waits 1 second, and then prints “world”
+
+.code -numbers code/routine.py
+
+
+* Goroutine and channell
 
 *Channels* are the pipes that connect concurrent *goroutines*.
 You can send values into channels from one *goroutine* and receive those values into another *goroutine*.
 
-.play code/channel.go
+.play -numbers code/routine.go
 
-* Inheritance in Python:
+* Inheritance in Python
 
 For *inheritance* Python use *base* (parent) and *sub* (child) classes.
 *Base* class create a pattern out of which *sub*, child can be based on.
 
-.code code/inheritance.py
+.code -numbers code/inheritance.py
 
 
-* Inheritance in Go:
+* Inheritance in Go
 
 Go is unique from a lot of object-oriented languages in that it doesn’t have classes. 
 Instead, Go has two awesome features: *interface* and *struct*.
@@ -154,11 +185,29 @@ Instead, Go has two awesome features: *interface* and *struct*.
  - Within a struct, non-blank field names must be unique.
 
 
-* Inheritance in Go:
-.code code/inheritance.go
+* Inheritance in Go
+.code -numbers code/inheritance.go
 
 
 * Python vs Go
+
 .image images/finish.gif 350 500
 
-End the winner is...
+And the winner is...
+
+
+
+* And the winner is...
+
+Go is a very performant language with great support for concurrency. 
+It is almost as fast as languages like C++ and Java.
+
+While it does take a bit more time to build things using Go compared to Python you’ll save a ton of time spent on optimizing the code.
+
+*Python* *usage*: its almost everywhere :)
+
+*Golang* *usage*: Docker, K8s, Prometheus are written in Go. 
+Google and Soundcloud using it!
+
+.image images/codeGopher.gif 100 100
+
