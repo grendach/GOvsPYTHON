@@ -3,16 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var arr [3]int                             //initiate list [0.0.0]
-	arr[0] = 4                                 //assign value to element
-	colors := []string{"blue", "black", "red"} //SLICES - when you don't know a size of a list
-	colors = append(colors, "orange")          //append == recreation
+	var arr [3]int                        //initiate array [0.0.0]
+	arr[0] = 4                            //assign value to element
+	c := []string{"blue", "black", "red"} //initiate SLICE - when you don't know array size
+	b := make([]int, 0, 5)                // len(b)=0, cap(b)=5
 
-	// length, capacity
-	fmt.Println(len(colors))
-	fmt.Println(cap(colors))
+	c = append(c, "orange") //append to slice
 
-	// show results
-	fmt.Println("slice 'colors': ", colors)
-	fmt.Println("list 'arr': ", arr)
+	fmt.Printf("len=%d cap=%d c=%v\n", len(c), cap(c), c)
+	fmt.Printf("len=%d cap=%d b=%v\n", len(b), cap(b), b)
 }

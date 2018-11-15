@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-//only for loops available in Golang
 func main() {
 	//loop from 0 until 5 is reached
 	for i := 1; i <= 5; i++ {
