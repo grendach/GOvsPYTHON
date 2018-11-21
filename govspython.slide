@@ -24,9 +24,9 @@ Nokia
 
 - Created by *Guido* *van* *Rossum*  in 1991.
 
-- Python is dynamicly typed, interpreter language 
+- Python is dynamicly typed, interpreter language. 
 
-- Use whitespace for indentation
+- Use whitespace for indentation.
 
 - Has 33 keywords (`class`, `def`, `for`, `if`, `while`, etc.)
 
@@ -41,17 +41,17 @@ Nokia
 
 * Who is who: Go
 
-- Created by Rob Pike , Robert Griesemer and Ken Thompson in 2009
-- Go is a statically typed, compiled language
-- Built in `fmt` package makes code formate for you
+- Created by Rob Pike , Robert Griesemer and Ken Thompson in 2009.
+- Go is a statically typed, compiled language.
+- Built in `fmt` package makes code formate for you.
 - Go has 25 kyewords (`go`, `goto`, `chan`, `func`, `for`, `if`, etc. )
   
 The designers wanted to resolve common criticisms of other languages, while retaining many of their useful characteristics:
 
   - Statically typed and efficient (like C++ or Java)
   - Productive and easy to use (like Python or JavaScript)
-  - Go has pointers but unlice C, Go has no pointer arithmetic
-  - Enabling high-performance networking and multiprocessing
+  - Go has pointers but unlice C, Go has no pointer arithmetic.
+  - Enabling high-performance networking and multiprocessing.
 .image images/strongGopher.jpg 100 100
 
 
@@ -71,16 +71,16 @@ Let the battle begin...
 * Differences in 
 - Lists(slices)
 - Dictionaries(maps)
-- Loops
-- Error handling
-- Pointers
-- Coroutine vs Goroutine and channell
-- Inheritance
+- Loops.
+- Error handling.
+- Pointers.
+- Coroutine vs Goroutine and channell.
+- Inheritance.
 
 * List in Python
 
 Python has next data types:
-  - *List* [ ] - ordered and changeable collection
+  - *List* [ ] - ordered and changeable collection.
   - *Tuple* ( )- ordered and unchangeable.
   - *Set* { } - unordered and unindexed.
   - *Dictionary* { } - unordered, changeable and indexed.
@@ -91,7 +91,7 @@ Python has next data types:
 * Slices (lists) in Go
 Slices are like references to arrays.
 A slice does not store any data, it just describes a section of an underlying array.
-Slices can be created with the built-in `make` function
+Slices can be created with the built-in `make` function.
 This is how you create dynamically-sized arrays.
 
 .play -numbers code/lists.go
@@ -175,13 +175,13 @@ Go is unique from a lot of object-oriented languages in that it doesn’t have c
 Instead, Go has two awesome features: *interface* and *struct*.
 
 *Interfaces*:
- - You don’t explicitly say a data type implements an interface;
- - Your data types must implement all of the methods that the interface defines;
+ - You don’t explicitly say a data type implements an interface.
+ - Your data types must implement all of the methods that the interface defines.
  - Compiler checks to see if assignments to variables of the interface type are valid.
 
 *Struct*:
- - It's a sequence of named elements, called fields, each of which has a name and a type;
- - Field names may be specified explicitly (IdentifierList) or implicitly (EmbeddedField);
+ - It's a sequence of named elements, called fields, each of which has a name and a type.
+ - Field names may be specified explicitly (IdentifierList) or implicitly (EmbeddedField)
  - Within a struct, non-blank field names must be unique.
 
 
@@ -204,7 +204,7 @@ It is almost as fast as languages like C++ and Java.
 
 While it does take a bit more time to build things using Go compared to Python you’ll save a ton of time spent on optimizing the code.
 
-*Python* *usage*: its almost everywhere :)
+*Python* *usage*: it's almost everywhere :)
 
 *Golang* *usage*: Docker, K8s, Prometheus are written in Go. 
 Google and Soundcloud using it!
